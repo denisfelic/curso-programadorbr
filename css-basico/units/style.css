@@ -1,0 +1,29 @@
+body{
+    background-color: #000;
+    color: white;
+    background-image: url(../../html-basico/assets/javascript-caneca.jpg);
+    background-size: contain;
+    background-attachment: fixed;
+    background-position: center;
+}
+body > p{
+    font-size: 40px;
+    margin: 150px 0;
+}
+
+
+#p3{
+    width: 10px;
+    height: 10px;
+    background: none;
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    top: 600vh;
+}
+
+
+#cm{
+    background-color: #0033ff;
+}
