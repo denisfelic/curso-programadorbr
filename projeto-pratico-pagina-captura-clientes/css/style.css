@@ -1,0 +1,187 @@
+:root {
+  --primary-light-blue: rgb(88, 196, 223);
+  --secondary-gray: rgb(36, 36, 36);
+  --secondary-white: #eee;
+  --secondary-black: #000;
+  --border-radius-size: 1.5px;
+  --blue-hover-color: rgb(39, 206, 248);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+/* LAYOUT */
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--secondary-black);
+  font-size: 14px;
+}
+
+img {
+  max-width: 120px;
+  border-radius: var(--border-radius-size);
+}
+
+.container {
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+header {
+  background-color: var(--primary-light-blue);
+  color: var(--secondary-white);
+  height: fit-content;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header h1 {
+  font-size: 1.5em;
+  text-align: center;
+}
+
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+main .banner-section {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 20px 5%;
+  background-image: url(/projeto-pratico-pagina-captura-clientes/images/people.jpg);
+  background-size: cover;
+}
+
+main .banner-section form {
+  width: 100%;
+  max-width: 230px;
+  height: fit-content;
+  min-height: 370px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.561);
+  color: var(--secondary-black);
+  padding: 10px 20px;
+  border-radius: var(--border-radius-size);
+}
+
+main .banner-section form>h2 {
+  font-size: 1em;
+  text-transform: uppercase;
+}
+
+main .banner-section form>p {
+  font-size: .9em;
+  font-weight: 500;
+}
+
+main .banner-section form input, select {
+  width: 100%;
+  height: 35px;
+  padding: 5px;
+  border: none;
+}
+
+select {
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  -ms-progress-appearance: none;
+  background-image: url(/projeto-pratico-pagina-captura-clientes/images/arrow.jpg);
+  background-repeat: no-repeat;
+  background-position-x: calc(100% - 10px);
+  background-position-y: center;
+}
+
+main .banner-section form>input[type="submit"] {
+  background-color: var(--primary-light-blue);
+  color: var(--secondary-white);
+  border: none;
+  padding: 5px;
+  font-weight: bold;
+  border-radius: var(--border-radius-size);
+  transition: 100ms;
+}
+
+main .banner-section form>input[type="submit"]:hover {
+  background-color: var(--blue-hover-color);
+}
+
+main .banner-section form>input[type="submit"]:active {
+  border: 1px solid white;
+}
+
+main .about-section {
+  background-color: var(--secondary-gray);
+  color: var(--secondary-white);
+  flex: .7;
+  display: grid;
+  place-items: center;
+  padding: 2% 0;
+}
+
+main .about-section .about-container {
+  display: flex;
+  width: 70%;
+  height: 80%;
+  align-items: center;
+  justify-content: center
+}
+
+main .about-section .about-container .about-container--info {
+  margin-left: 40px;
+  max-width: 50%;
+}
+
+main .about-section .about-container .about-container--info p {
+  margin-top: 10px;
+  font-size: .8em;
+}
+
+footer {
+  background-color: var(--secondary-black);
+  height: 10%;
+  user-select: none;
+}
+
+@media screen and (max-width: 425px) {
+  .container {
+    height: auto;
+  }
+  main .banner-section {
+    justify-content: center;
+  }
+  .about-container {
+    flex-direction: column;
+    padding: 20px 0;
+  }
+  main .banner-section form {
+    width: 100%;
+    max-width: 90%;
+    height: 100%;
+  }
+  main .about-section .about-container .about-container--info {
+    margin: 10px 0;
+    max-width: none;
+    text-align: center;
+  }
+  footer {
+    height: 10vh;
+  }
+}
